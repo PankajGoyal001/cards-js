@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cards</title>
+    <style>
+      body {
+        font-family: "Quicksand", sans-serif;
+        background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+        height: 1vh;
+      }
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+      }
+      .maincontainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 400px;
+        width: 100%;
+        border-radius: 25px;
+        background-color: #fff;
+      }
+      img {
+        border-radius: 25px 25px 0 0;
+      }
+      .img2 {
+        border-radius: 50%;
+      }
+      .first {
+        font-size: 15px;
+        padding: 5px;
+        background: #56ccf2;
+        background: linear-gradient(to bottom, #2f80ed, #56ccf2);
+        color: #fafafa;
+        max-width: 100px;
+        border-radius: 20px;
+        text-align: center;
+        margin-left: 10px;
+      }
+      h1 {
+        font-size: 28px;
+        font-weight: 800p;
+        padding-left: 10px;
+      }
+      .text {
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 10px;
+      }
+      .footer {
+        display: flex;
+        gap: 10px;
+        padding-top: 70px;
+        align-items: center;
+        padding-left: 10px;
+      }
+      .img2 {
+        max-width: 60px;
+      }
+      .second-text {
+        font-size: 13px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="maincontainer">
+        <img src="./image1.jpg" alt="image1" />
+        <h4 class="first">Technology</h4>
+        <h1 class="">What's New In 2024 Tech</h1>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea
+          atque quidem!
+        </p>
+        <div class="footer">
+          <img class="img2" src="./f-img.png" alt="img2" />
+          <div>
+            <h5 class="first-text">Jane Doe</h5>
+            <p class="second-text">2h ago</p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <script>
+        const container = document.createElement(".container")
+        const data = [
+            {
+                image: "image1.jpg",
+                head: "Technology",
+                name: "What's new in 2022 Tech",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At quidem!",
+                img: "f-img.png",
+                text2: "Jane Doe",
+                text3: "2h ago"
+            },
+            {
+                image: "image2.jpg",
+                head: "Food",
+                name: "Delicious Food",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At quidem!",
+                img: "f-img2.png",
+                text2: "Jony Doe",
+                text3: "Yesterday"
+            },
+            {
+                image: "image3.jpg",
+                head: "Automobile",
+                name: "Race to your heart content",
+                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At quidem!",
+                img: "f-img3.png",
+                text2: "John Doe",
+                text3: "2d ago"
+            }
+
+        ]
+
+        data.map((item , index) => {
+            const card = document.createElement("div");
+            card.className = "cards";
+            card.classList =`
+        <img src="./${item.image}" alt="image1" />
+        <h4 class="">${item.head}</h4>
+        <h1 class="">${item.name}</h1>
+        <p class="text">${item.text}</p>
+        <div class="footer">
+          <img class="img2" src="./${item.img}" alt="img2" />
+          <div>
+            <h5 class="first-text">${item.text2}</h5>
+            <p class="second-text">${item.text3}</p>
+          </div>
+      </div> `;
+
+      container.appendChild(cards)
+
+        });
+    </script>
+  </body>
+</html>
